@@ -16,7 +16,7 @@ namespace MyThread
                 Console.WriteLine("Worker Thread:" + i.ToString());
             }
         }
-        static void Main()
+        static void Main0()
         {
             ThreadStart ts = new ThreadStart(WorkerMethod);
             Thread t = new Thread(ts);
