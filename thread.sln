@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thread", "thread\thread.csproj", "{A3009896-4CC6-40A2-938C-532EFF4F5708}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyThread", "thread\MyThread.csproj", "{A3009896-4CC6-40A2-938C-532EFF4F5708}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

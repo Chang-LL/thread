@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A3009896-4CC6-40A2-938C-532EFF4F5708}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>thread</RootNamespace>
-    <AssemblyName>thread</AssemblyName>
+    <RootNamespace>MyThread</RootNamespace>
+    <AssemblyName>MyThread</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CreateAppDomains.cs" />
+    <Compile Include="MyAppDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleThread.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

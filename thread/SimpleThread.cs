@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace thread
+namespace MyThread
 {
-    class Program
+    class SimpleThread
     {
-        static void Main(string[] args)
-        {
-        }
+        int i = 5;
+        int x = 10;
+
     }
 }
