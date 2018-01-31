@@ -30,7 +30,7 @@ namespace MyThread
             tmr.Dispose();
             complete = true;
         }
-        public static void Main()
+        public static void Main0()
         {
             TimerExample obj = new TimerExample();
             Thread t = new Thread(new ThreadStart(obj.GenerateText));
