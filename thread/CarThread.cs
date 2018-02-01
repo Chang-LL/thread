@@ -62,7 +62,6 @@ namespace MyThread
         public static void Main0()
         {
             Console.WriteLine("Entering void Main!");
-            int j;
             CarThread carThread = new CarThread();
             Thread worker = new Thread(new ThreadStart(carThread.StartTheEngine));
             worker.Start();        

@@ -34,7 +34,7 @@ namespace MyThread
                 }
             }
         }
-        public static void Main()
+        public static void Main0()
         {
             Console.WriteLine("Entering the void Main!");
             sleeper = new Thread(new ThreadStart(SleepThread));
