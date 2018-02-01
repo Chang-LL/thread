@@ -49,8 +49,11 @@
     <Compile Include="CreateAppDomains.cs" />
     <Compile Include="DoSomethingThread.cs" />
     <Compile Include="EngineThread.cs" />
+    <Compile Include="ExecutionOrder.cs" />
+    <Compile Include="ExeutionOrder2.cs" />
     <Compile Include="Interrupt.cs" />
     <Compile Include="JoiningThread.cs" />
+    <Compile Include="LoopingThreads.cs" />
     <Compile Include="MyAppDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleThread.cs" />

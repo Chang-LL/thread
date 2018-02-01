@@ -25,7 +25,7 @@ namespace MyThread
                 Console.Write(i + " ");
             }
         }
-        public static void Main()
+        public static void Main0()
         {
             firstThread = new Thread(new ThreadStart(First));
             secondThread = new Thread(new ThreadStart(Second));
