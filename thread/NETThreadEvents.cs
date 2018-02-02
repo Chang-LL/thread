@@ -15,7 +15,7 @@ namespace MyThread
             bool b = mansig.WaitOne(1000, false);
             Console.WriteLine("ManualResetEvent After WaitOne " + b);
         }
-        public static void Main()
+        public static void Main00()
         {
             ManualResetEvent mansig = new ManualResetEvent(true);
             Console.WriteLine("ManualResetEvent Before WaitOne ");

@@ -45,8 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book.cs" />
     <Compile Include="CarThread.cs" />
     <Compile Include="CreateAppDomains.cs" />
+    <Compile Include="DeadLock.cs" />
     <Compile Include="DoSomethingThread.cs" />
     <Compile Include="EngineThread.cs" />
     <Compile Include="EnterExit.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="JoiningThread.cs" />
     <Compile Include="Lock.cs" />
     <Compile Include="LoopingThreads.cs" />
+    <Compile Include="ManualReset.cs" />
     <Compile Include="MethodImpl.cs" />
     <Compile Include="MonitorTryEnter.cs" />
     <Compile Include="MyAppDomain.cs" />
@@ -70,6 +73,9 @@
     <Compile Include="ThreadState.cs" />
     <Compile Include="TimerExample.cs" />
     <Compile Include="WaitAndPulse.cs" />
+    <Compile Include="WinterLocked.cs" />
+    <Compile Include="WroxMutex.cs" />
+    <Compile Include="WroxStatic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
