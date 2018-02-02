@@ -59,7 +59,7 @@ namespace MyThread
         public class DoMail
         {
             static ArrayList al = new ArrayList();
-            public static void Main()
+            public static void Main0()
             {
                 for (int i = 1; i <=1000; i++)
                 {

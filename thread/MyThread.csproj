@@ -49,13 +49,19 @@
     <Compile Include="CreateAppDomains.cs" />
     <Compile Include="DoSomethingThread.cs" />
     <Compile Include="EngineThread.cs" />
+    <Compile Include="EnterExit.cs" />
     <Compile Include="ExecutionOrder.cs" />
     <Compile Include="ExeutionOrder2.cs" />
     <Compile Include="Interrupt.cs" />
     <Compile Include="JoiningThread.cs" />
+    <Compile Include="Lock.cs" />
     <Compile Include="LoopingThreads.cs" />
+    <Compile Include="MethodImpl.cs" />
+    <Compile Include="MonitorTryEnter.cs" />
     <Compile Include="MyAppDomain.cs" />
+    <Compile Include="NETThreadEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadWriteLock.cs" />
     <Compile Include="SimpleThread.cs" />
     <Compile Include="ThreadPriority.cs" />
     <Compile Include="ThreadPriority2.cs" />
@@ -63,6 +69,7 @@
     <Compile Include="ThreadStartBranching.cs" />
     <Compile Include="ThreadState.cs" />
     <Compile Include="TimerExample.cs" />
+    <Compile Include="WaitAndPulse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
