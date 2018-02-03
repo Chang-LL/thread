@@ -45,7 +45,7 @@ namespace MyThread.GenThreadPool
             }
         }
         [STAThread]
-        static void Main()
+        static void Main0()
         {
             ts = new TraceSwitch("MySwitch", "Four different trace levels");
             //Create a file listener

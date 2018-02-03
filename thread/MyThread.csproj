@@ -54,6 +54,7 @@
     <Compile Include="EnterExit.cs" />
     <Compile Include="ExecutionOrder.cs" />
     <Compile Include="ExeutionOrder2.cs" />
+    <Compile Include="GenThreadPool\DataImport.cs" />
     <Compile Include="GenThreadPool\GenPool.cs" />
     <Compile Include="GenThreadPool\GenThreadPoolImpl.cs" />
     <Compile Include="GenThreadPool\IThreadPool.cs" />
