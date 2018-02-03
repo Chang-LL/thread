@@ -1,21 +1,74 @@
 ﻿using System;
+using System.Threading;
 
 namespace MyThread.GenThreadPool
 {
     public class GenPool
     {
-        private GenThreadPoolImpl genThreadPoolImpl1;
-        private GenThreadPoolImpl genThreadPoolImpl2;
+        private GenThreadPoolImpl gn;
+        private object _lock;
 
-        public GenPool(GenThreadPoolImpl genThreadPoolImpl1, GenThreadPoolImpl genThreadPoolImpl2)
+        public GenPool(object lock_, GenThreadPoolImpl gn_)
         {
-            this.genThreadPoolImpl1 = genThreadPoolImpl1;
-            this.genThreadPoolImpl2 = genThreadPoolImpl2;
+            gn = gn_;
+            _lock = lock_;
         }
 
-        internal void Run()
+        public void Run()
         {
-            throw new NotImplementedException();
+            Thread job = null;
+            try
+            {
+                while (true)
+                {
+                    while (true)
+                    {
+                        lock (_lock)
+                        {
+                            if(gn.PendingJobs.Count==0)
+                            {
+                                int index = gn.FindThread();
+                                if (index == -1) return;
+                                ((ThreadElement)gn.AvailableThreads[index]).Idle = true;
+                                break;
+                            }
+                            job = (Thread)gn.PendingJobs[0];
+                            gn.PendingJobs.RemoveAt(0);
+                        }
+                        job.Start();
+                    }
+                    try
+                    {
+                        lock (this)
+                        {
+                            if (gn.MaxIdleTime == -1)
+                                Monitor.Wait(this);
+                            else Monitor.Wait(this, gn.MaxIdleTime);
+                        }
+                    }
+                    catch (Exception)
+                    {  
+                        
+                    }
+                    lock(_lock)
+                    {
+                        if(gn.PendingJobs.Count==0)
+                        {
+                            if(gn.MinThreads!=-1&&
+                                gn.AvailableThreads.Count>gn.MinThreads)
+                            {
+                                gn.RemoveThread();
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                
+            }
         }
     }
 }
