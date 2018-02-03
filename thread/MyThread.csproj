@@ -54,6 +54,11 @@
     <Compile Include="EnterExit.cs" />
     <Compile Include="ExecutionOrder.cs" />
     <Compile Include="ExeutionOrder2.cs" />
+    <Compile Include="GenThreadPool\GenPool.cs" />
+    <Compile Include="GenThreadPool\GenThreadPoolImpl.cs" />
+    <Compile Include="GenThreadPool\IThreadPool.cs" />
+    <Compile Include="GenThreadPool\Stats.cs" />
+    <Compile Include="GenThreadPool\ThreadElement.cs" />
     <Compile Include="Interrupt.cs" />
     <Compile Include="JoiningThread.cs" />
     <Compile Include="Lock.cs" />
@@ -65,7 +70,11 @@
     <Compile Include="NETThreadEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadWriteLock.cs" />
+    <Compile Include="RegWait.cs" />
     <Compile Include="SimpleThread.cs" />
+    <Compile Include="ThreadDemo.cs" />
+    <Compile Include="ThreadPoolDemo.cs" />
+    <Compile Include="ThreadPoolState.cs" />
     <Compile Include="ThreadPriority.cs" />
     <Compile Include="ThreadPriority2.cs" />
     <Compile Include="ThreadSleep.cs" />

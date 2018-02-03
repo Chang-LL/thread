@@ -133,7 +133,7 @@ namespace MyThread
                 acc.Add(bk);
             }
         }
-        static void Main()
+        static void Main0()
         {
             acc = new BookLib();
             if(Console.ReadLine().Length>0)
