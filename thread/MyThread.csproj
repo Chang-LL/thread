@@ -59,6 +59,10 @@
     <Compile Include="GenThreadPool\IThreadPool.cs" />
     <Compile Include="GenThreadPool\Stats.cs" />
     <Compile Include="GenThreadPool\ThreadElement.cs" />
+    <Compile Include="GenThreadPool\TraceAssert.cs" />
+    <Compile Include="GenThreadPool\TraceExample.cs" />
+    <Compile Include="GenThreadPool\TraceSwitchExample.cs" />
+    <Compile Include="GenThreadPool\Writing.cs" />
     <Compile Include="Interrupt.cs" />
     <Compile Include="JoiningThread.cs" />
     <Compile Include="Lock.cs" />
@@ -72,6 +76,7 @@
     <Compile Include="ReadWriteLock.cs" />
     <Compile Include="RegWait.cs" />
     <Compile Include="SimpleThread.cs" />
+    <Compile Include="TestThreadPool.cs" />
     <Compile Include="ThreadDemo.cs" />
     <Compile Include="ThreadPoolDemo.cs" />
     <Compile Include="ThreadPoolState.cs" />

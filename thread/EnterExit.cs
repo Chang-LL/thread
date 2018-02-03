@@ -44,7 +44,7 @@ namespace MyThread
         public static void Main0()
         {
             EnterExit e = new EnterExit();
-            if (false)
+            if (e!=null)//
             {
                 Thread nt1 = new Thread
                     (new ThreadStart(e.NonCtricalSection));

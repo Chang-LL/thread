@@ -9,7 +9,7 @@ namespace MyThread
     class RegWait
     {
         private static int i = 0;
-        public static void Main()
+        public static void Main0()
         {
             AutoResetEvent autoReset = new AutoResetEvent(false);
             ThreadPool.RegisterWaitForSingleObject(

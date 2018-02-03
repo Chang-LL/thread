@@ -6,8 +6,7 @@ namespace MyThread.GenThreadPool
     public class GenPool
     {
         private GenThreadPoolImpl gn;
-        private object _lock;
-
+        private object _lock;        
         public GenPool(object lock_, GenThreadPoolImpl gn_)
         {
             gn = gn_;
