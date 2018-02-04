@@ -11,7 +11,7 @@ namespace MyThread.GenThreadPool
     {
         public static BooleanSwitch bs;
         [STAThread]
-        static void Main()
+        static void Main0()
         {
             Trace.Listeners.RemoveAt(0);
             bs = new BooleanSwitch("DISwitch", "DataImport switch");
@@ -102,7 +102,29 @@ namespace MyThread.GenThreadPool
     {
         //Path and filename of the retrieved file
         public string strFileName = null;
-
+        private bool GetFileAccess()
+        {
+            Trace.WriteLineIf(DataImport.bs.Enabled, DateTime.Now +
+                " - Trying to get exclusive access to the " +
+                strFileName + " file.");
+            try
+            {
+                FileStream fs = File.Open(strFileName, FileMode.Append,
+                    FileAccess.Write, FileShare.None);
+                fs.Close();
+                Trace.WriteLineIf(DataImport.bs.Enabled, DateTime.Now +
+               " - Access to the " +
+               strFileName + " file allowed.");
+                return true;
+            }
+            catch (Exception)
+            {
+                Trace.WriteLineIf(DataImport.bs.Enabled,DateTime.Now+
+                    "access denied to the " +
+                strFileName + " file.");
+                return false;
+            }
+        }
         public void Import()
         {
             //Create a connection object
@@ -114,6 +136,13 @@ namespace MyThread.GenThreadPool
             SqlCommandBuilder sa = new SqlCommandBuilder(da);
             try
             {
+                while(GetFileAccess()==false)
+                {
+                    Thread.Sleep(5000);
+                    Trace.WriteLineIf(DataImport.bs.Enabled, DateTime.Now +
+               " - Slept 5 seconds... try to get exclusive access to the " +
+               strFileName + " file.");
+                }
                 Trace.WriteLineIf(DataImport.bs.Enabled, DateTime.Now + " - Filling the DataSet");
                 da.Fill(ds);
                 //Read the xml file filling another dataset
